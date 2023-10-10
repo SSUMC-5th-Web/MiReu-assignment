@@ -1,4 +1,5 @@
 import Movie from "./components/Movie";
+
 import { dummy } from "./movieDummy.js";
 import './index.css';
 
@@ -12,7 +13,7 @@ function App() {
               title={item.title}
               poster_path={item.poster_path}
               vote_average={item.vote_average}
-             
+              overview={item.overview}
             />
           );
         })}
