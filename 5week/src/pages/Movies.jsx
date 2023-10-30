@@ -1,12 +1,8 @@
-import Movie from "./Movie/Movie";
-//movieDummy.js 파일에서 dummy라는 변수를 import
-import { dummy } from "./movieDummy.js";
-// 화면에 뜨는 카드 수 지정: grid
-//hover, block > css로 마우스 오버
-//overview.length > 180자로 제한하는 기능>> 긴 문자는 ... 처리
+import React from "react";
+import { dummy } from "../movieDummy";
+import Movie from "../components/Movie";
 
-
-function App() {
+export default function Movies() {
   return (
     <div>
       <div className="app-container">
@@ -24,5 +20,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Overview from "../Overview.jsx";
+import Overview from "./Overview";
 //기본경로
 const ING_BASE_URL = "https://image.tmdb.org/t/p/w1280/";
 //movie 컴포넌트는 영화의 제목, 포스터, 평점, 개요를 보여주는 컴포넌트로 props를 받음
@@ -16,7 +16,8 @@ export default function Movie({ title, poster_path, vote_average, overview }) {
   const handleMouseLeave = () => {
     setIsMouseOver(false);
   };
-  const shortOverview = overview.length > 180 ? overview.slice(0, 180) + '...' : overview;
+  const shortOverview =
+    overview.length > 180 ? overview.slice(0, 180) + "..." : overview;
   //<div className={movie-container ${isMouseOver ? "show-overview" : ""}}>는
   // 영화 컨테이너를 나타내며, 마우스가 영화 컨테이너 위에 있을 때(isMouseOver가 true 일 때) "show-overview" 클래스가 추가
   return (

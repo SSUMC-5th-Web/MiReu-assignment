@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Overview from "../components/Overview";
-import { MovieContainer, MovieInfo } from './MovieStyles.jsx';
+import * as a from './MovieStyles.jsx';
 
 const IMG_BASE_URL = "https://image.tmdb.org/t/p/w1280/";
 
@@ -18,7 +18,7 @@ export default function Movie({ title, poster_path, vote_average, overview }) {
   const shortOverview = overview.length > 180 ? overview.slice(0, 180) + '...' : overview;
 
   return (
-    <MovieContainer
+    <a.MovieContainer
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       isMouseOver={isMouseOver}
@@ -27,10 +27,10 @@ export default function Movie({ title, poster_path, vote_average, overview }) {
 
       {isMouseOver && <Overview overview={shortOverview} />}
       
-      <MovieInfo>
+      <a.MovieInfo>
         <h3>{title}</h3>
         <span>{vote_average}</span>
-      </MovieInfo>
-    </MovieContainer>
+      </a.MovieInfo>
+    </a.MovieContainer>
   );
 }
