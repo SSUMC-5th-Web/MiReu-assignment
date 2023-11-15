@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Overview from "../Overview.jsx";
+import Overview from "../components/Overview";
 //기본경로
 const ING_BASE_URL = "https://image.tmdb.org/t/p/w1280/";
 //movie 컴포넌트는 영화의 제목, 포스터, 평점, 개요를 보여주는 컴포넌트로 props를 받음
