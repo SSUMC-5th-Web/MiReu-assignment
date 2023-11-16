@@ -29,6 +29,12 @@ export default function Header() {
               <Link className="header-nav-item" to="/person">
                 인물
               </Link>
+              </li>
+            <li>
+              <Link className="header-nav-item" to="/login">
+               로그인
+              </Link>
+
             </li>
           </ul>
         </div>
