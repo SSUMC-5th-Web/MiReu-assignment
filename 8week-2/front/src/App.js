@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function LoginForm() {
+function App() {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
 
@@ -8,7 +8,7 @@ function LoginForm() {
     event.preventDefault();
 
     try {
-      const response = await fetch("localhost:8000/user/login", {
+      const response = await fetch("http://localhost:8000/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,6 +31,7 @@ function LoginForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div>
+        <h1>UMC 로그인 PAGE</h1>
         <label>ID:</label>
         <input type="text" value={id} onChange={(e) => setId(e.target.value)} />
       </div>
@@ -47,4 +48,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default App;
