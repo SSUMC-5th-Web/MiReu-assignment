@@ -5,11 +5,9 @@ const User = {
   pw: 'test2323@@@'
 }
 
-
 export default function Login() {
     const [email, setEmail] = useState('');
     const [pw, setPw] = useState('');
-
     const [emailValid, setEmailValid] = useState(false);
     const [pwValid, setPwValid] = useState(false);
     const [notAllow, setNotAllow] = useState(true);
@@ -50,7 +48,8 @@ export default function Login() {
       }
     }
 
-    return (
+  return (
+      <div className='full'>
       <div className="page">
         <div className="titleWrap">
           이메일과 비밀번호를
@@ -101,6 +100,7 @@ export default function Login() {
             확인
           </button>
         </div>
+      </div>
       </div>
     );
 }
